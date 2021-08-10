@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import EditIcon from '@material-ui/icons/Edit';
 
 
 const User = props => (
   <tr>
     <td>{props.user.name}</td>
     <td>
-      {/* <Link to={"/" + props.user.id}><EditIcon /></Link> */}
+      <Link to={"/" + props.user.id}>Details</Link>
     </td>
   </tr>
 )

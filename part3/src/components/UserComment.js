@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 
 
-const UserDetails = (props) => {
+const UserComment = (props) => {
     const [user, setUser] = useState({});
     const [todo, setTodo] = useState([]);
     const [album, setAlbum] = useState([]);
@@ -95,47 +94,22 @@ const UserDetails = (props) => {
                     <tr>
                         <td>Photo</td>
                         <td>{countPhoto}</td>
-                        <td><Link to={"/comments/" +user.id}>Details</Link></td>
                     </tr>
                     <tr>
                         <td>Todo</td>
                         <td>{todo.length}</td>
-                        <td><Link to={"/todos/" +user.id}>Details</Link></td>
                     </tr>
                     <tr>
                         <td>Comment</td>
                         <td>{user.company?.name}</td>
-                        <td><Link to={"/photos/" +user.id}>Details</Link></td>
                     </tr>
                 </thead>
             </table>
         </div>
 
-        // <div className="d-flex">
-        //   <div className="ml-5">
-        //     <h2 className="font-weight-bold">{user.name}</h2>
-        //     <div className="d-flex flex-row">
-        //       <p className="font-weight-bold">Username : </p>
-        //       <p>{user.username}</p>
-        //     </div>
-        //     <div className="d-flex flex-row">
-        //       <p className="font-weight-bold">Email : </p>
-        //       <p>{user.email}</p>
-        //     </div>
-        //     <div className="d-flex flex-row">
-        //       <p className="font-weight-bold">Phone : </p>
-        //       <p>{user.phone}</p>
-        //     </div>
-        //     <div className=" d-flex flex-row text-primary">
-        //       <h4 className="font-weight-bold">Website : </h4>
-        //       <h4>{user.website} </h4>
-        //     </div>
-        //   </div>
-        // </div>
-
     );
 }
-export default UserDetails;
+export default UserComment;
 
 
 
