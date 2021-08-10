@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Todo = props => (
     <tr>
       <td>{props.todo.title}</td>
-      <td>{props.todo.completed}</td>
+      <td>{props.todo.completed ? 'completed' : 'uncompleted'}</td>
     </tr>
   )
 

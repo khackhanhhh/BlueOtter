@@ -5,8 +5,9 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import UserDetails from './components/UserDetails';
 import UserList from './components/UserList';
 import UserTodo from './components/UserTodo';
-import UserPhoto from './components/UserPhoto';
+import AlbumList from './components/AlbumList';
 import UserComment from './components/UserComment';
+import UserPhoto from './components/UserPhoto';
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
       <Route path="/:id" exact component={UserDetails} />
       <Route path="/todos/:id" component={UserTodo} />
       <Route path="/comments/:id" component={UserComment} />
-      <Route path="/photos/:id" component={UserPhoto} />
+      <Route path="/photos/:id" component={AlbumList} />
+      <Route path="/album/:id" component={UserPhoto} />
       </div>
     </Router>
     

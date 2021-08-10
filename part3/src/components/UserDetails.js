@@ -8,7 +8,9 @@ const UserDetails = (props) => {
     const [user, setUser] = useState({});
     const [todo, setTodo] = useState([]);
     const [album, setAlbum] = useState([]);
-    const [countPhoto,setCountPhoto]=useState(0);
+    const [countPhoto, setCountPhoto] = useState(0);
+    const [post, setPost] = useState([]);
+    const [countComment, setCountComment] = useState(0);
 
     const proId = props.match.params.id;
 
@@ -17,40 +19,35 @@ const UserDetails = (props) => {
             .then(response => {
                 setUser(response.data);
             })
-            .catch(function (error) {
-                console.log(error);
-            })
-    }, []);
-    useEffect(() => {
-        axios.get('https://jsonplaceholder.typicode.com/users/' + props.match.params.id+'/todos')
+        axios.get('https://jsonplaceholder.typicode.com/users/' + props.match.params.id + '/todos')
             .then(response => {
                 setTodo(response.data);
             })
-            .catch(function (error) {
-                console.log(error);
-            })
-    }, []);
-
-    useEffect(() => {
-        axios.get('https://jsonplaceholder.typicode.com/users/' + props.match.params.id+'/albums')
-            .then(response => {
+        axios.get(`https://jsonplaceholder.typicode.com/albums?userId=${props.match.params.id}`)
+            .then((response) => {
                 setAlbum(response.data);
             })
-            .catch(function (error) {
-                console.log(error);
+        axios.get(`https://jsonplaceholder.typicode.com/posts?userId=${props.match.params.id}`)
+            .then((response) => {
+                setPost(response.data);
             })
     }, []);
 
-    const photo = album.map((curAlbum)=>{
-        axios.get('https://jsonplaceholder.typicode.com/albums/'+ curAlbum.id + '/photos')
-            .then(response => {
+    album.map((curAlbum) => {
+        axios.get(`https://jsonplaceholder.typicode.com/photos?albumId=${curAlbum.id}`)
+            .then((response) => {
                 setCountPhoto(response.data.length);
-                console.log(curAlbum.id+countPhoto);
             })
-            .catch(function (error) {
-                console.log(error);
+    });
+
+    post.map((curPost) => {
+        axios.get(`https://jsonplaceholder.typicode.com/comments?postId=${curPost.id}`)
+            .then((response) => {
+                setCountComment(response.data.length);
             })
-    })
+    });
+
+
 
 
     return (
@@ -94,44 +91,22 @@ const UserDetails = (props) => {
 
                     <tr>
                         <td>Photo</td>
-                        <td>{countPhoto}</td>
-                        <td><Link to={"/comments/" +user.id}>Details</Link></td>
+                        <td>{countPhoto * album.length}</td>
+                        <td><Link to={"/photos/" + user.id}>Details</Link></td>
                     </tr>
                     <tr>
                         <td>Todo</td>
                         <td>{todo.length}</td>
-                        <td><Link to={"/todos/" +user.id}>Details</Link></td>
+                        <td><Link to={"/todos/" + user.id}>Details</Link></td>
                     </tr>
                     <tr>
                         <td>Comment</td>
-                        <td>{user.company?.name}</td>
-                        <td><Link to={"/photos/" +user.id}>Details</Link></td>
+                        <td>{countComment * post.length}</td>
+                        <td><Link to={"/comments/" + user.id}>Details</Link></td>
                     </tr>
                 </thead>
             </table>
         </div>
-
-        // <div className="d-flex">
-        //   <div className="ml-5">
-        //     <h2 className="font-weight-bold">{user.name}</h2>
-        //     <div className="d-flex flex-row">
-        //       <p className="font-weight-bold">Username : </p>
-        //       <p>{user.username}</p>
-        //     </div>
-        //     <div className="d-flex flex-row">
-        //       <p className="font-weight-bold">Email : </p>
-        //       <p>{user.email}</p>
-        //     </div>
-        //     <div className="d-flex flex-row">
-        //       <p className="font-weight-bold">Phone : </p>
-        //       <p>{user.phone}</p>
-        //     </div>
-        //     <div className=" d-flex flex-row text-primary">
-        //       <h4 className="font-weight-bold">Website : </h4>
-        //       <h4>{user.website} </h4>
-        //     </div>
-        //   </div>
-        // </div>
 
     );
 }
