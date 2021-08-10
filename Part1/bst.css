@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    color: white;
+}
+
+.nav-item:hover {
+    background-color: silver;
+    color: black;
+}
+
+.btn-outline:hover {
+    background-color: red;
+    border-radius: 0px;
+}
+
+.container {
+    max-width: 760px !important;
+}
+
+a.btn-card {
+    text-decoration: none;
+    color: white;
+}
+
+a.btn-card.p-2:hover {
+    background-color: silver;
+    color: #000 !important;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.btn-card {
+    border-radius: 0px;
+    background-color: #000;
+    color: #fff;
+}
+
+.btn.p-2:hover {
+    background-color: silver;
+    color: #000;
+}
+
+i.fa.fa-facebook-official:hover {
+    color: #3c5b9b;
+}
+
+i.fa.fa-instagram:hover {
+    color: #bc1888;
+}
+
+i.fa.fa-snapchat:hover {
+    color: #359BED;
+}
+
+i.fa.fa-pinterest:hover {
+    color: #cb2027;
+    ;
+}
+
+i.fa.fa-twitter:hover {
+    color: #359BED;
+}
+
+i.fa.fa-linkedin:hover {
+    color: #3c5b9b;
+}
+
+.container.contact {
+    max-width: 800px !important;
+}
+
+input#Name {
+    max-width: 424px;
+}
+
+/*  */
+
+/* .icon_tw.icon2:hover{
+    background-color: #359BED;
+    color: #fff !important;
+  } */
+
+/* .iconpinterest.icon2.mr-2:hover{
+    background-color: color:  #359BED;color:  #359BED;;
+    color: #fff !important;
+  } */
+
+/* .iconinsta.icon2:hover{
+    color: white;
+    background: #f09433;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    } */
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+}
+.dropdown:hover .dropdown-toggle{
+    color: black;
+}
+.dropdown>.dropdown-toggle:active {
+    /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+}
+
+.w3-dropdown-content {
+    cursor: auto;
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    border-radius: 0px;
+    border: none;
+}
+
+.navbar-brand {
+    font-size: 16px;
+}
+
+@media only screen  and (max-width: 576px) { 
+  .form-title{
+      margin-bottom: 20px;
+      text-align: center;
+  } 
+} 
