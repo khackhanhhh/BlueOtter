@@ -7,7 +7,7 @@ const User = props => (
   <tr>
     <td>{props.user.name}</td>
     <td>
-      <Link to={"/" + props.user.id}>Details</Link>
+      <button type="button" class="btn btn-dark"><Link to={"/" + props.user.id} className="text-light">Details</Link></button>
     </td>
   </tr>
 )

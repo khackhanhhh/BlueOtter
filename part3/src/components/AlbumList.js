@@ -7,7 +7,7 @@ const Album = props => (
       <td>{props.album.title}</td>
 
       <td>
-        <Link to={"/album/" + props.album.id}>Details</Link>
+      <button type="button" class="btn btn-dark"><Link to={"/album/" + props.album.id} className="text-light">Details</Link></button>
       </td>
     </tr>
   )
@@ -27,8 +27,6 @@ const AlbumList = (props) => {
         axios.get(`https://jsonplaceholder.typicode.com/albums?userId=${props.match.params.id}`)
             .then((response) => {
                 setAlbum(response.data);
-                console.log(album);
-
             })
     }, []);
     

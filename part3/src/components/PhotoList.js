@@ -5,16 +5,16 @@ import axios from 'axios';
 const Photo = props => {
     return (
         <div className="card text-center text-white" >
-            <img height="200px" src={props.photos.url} className="card-img-top" alt="..." />
+            <img height="300px" src={props.photos.url} className="card-img-top" alt="..." />
             <div className="card-body bg-dark">
                 <h5 className="card-title">Album id: {props.photos.albumId}</h5>
-                <p className="card-text"><s>{props.photos.title}</s></p>
+                <p className="card-text">Title: {props.photos.title}</p>
             </div>
         </div>
     )
 }
 
-const UserPhoto = (props) => {
+const PhotoList = (props) => {
     const [album, setAlbum] = useState([]);
 
     useEffect(() => {
@@ -32,8 +32,8 @@ const UserPhoto = (props) => {
     const photoList = () => {
         return album.map(currentPhoto => {
             return (
-                <div className="mt-3">
-                    <Photo photos={currentPhoto} key={currentPhoto.id} />;
+                <div className="mt-3 col-12 col-sm-6 col-md-4">
+                    <Photo photos={currentPhoto} key={currentPhoto.id} />
                 </div>
             ) 
     
@@ -46,7 +46,7 @@ const UserPhoto = (props) => {
         <>
         <tbody>
           <div className="container"></div>
-          <div className="d-flex flex-wrap justify-content-around">
+          <div className="d-flex flex-wrap justify-content-around row">
             {photoList()}
           </div>
         </tbody>
@@ -54,4 +54,4 @@ const UserPhoto = (props) => {
       </>
     );
 }
-export default UserPhoto;
+export default PhotoList;

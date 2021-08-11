@@ -49,7 +49,7 @@
         <!-- menu -->
         <nav class="navbar navbar-expand-sm bg-black navbar-dark sticky-top
             p-0">
-            <div class="container-fluid p-0 m-0 pl-4">
+            <div class="container-fluid p-0 pl-4">
                 <a class="navbar-brand pt-0 pb-0" href="#">HOME</a>
                 <button class="navbar-toggler" onclick="myFunction()"
                     type="button"
@@ -226,9 +226,9 @@
 
                 </div>
             </div>
-            <div class="container pb-5">
+            <div class="container pb-3">
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 pt-2">
                         <div class="card">
                             <img class="card-img-top w-100"
                                 src="https://www.w3schools.com/w3images/newyork.jpg"
@@ -243,7 +243,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 pt-2">
                         <div class="card">
                             <img class="card-img-top"
                                 src="https://www.w3schools.com/w3images/paris.jpg"
@@ -258,7 +258,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 pt-2">
                         <div class="card">
                             <img class="card-img-top"
                                 src="https://www.w3schools.com/w3images/sanfran.jpg"
@@ -279,8 +279,8 @@
         </section>
         <!-- endTOUR DATES -->
         <!-- CONTACT -->
-        <section class="p-5">
-            <div class="container contact">
+        <section class="p-1">
+            <div class="container contact" id="contact" style="max-width:800px">
                 <div class="row">
                     <h2 class="mt-5 text-center">
                         CONTACT
@@ -288,44 +288,40 @@
                     <i class="mb-5 text-center text-secondary">
                         Fan? Drop a note!
                     </i>
-                    <div class="d-flex row">
-                        <div class="form-title col-sm-6">
-                            <i class="fa fa-map-marker text" aria-hidden="true"></i>
-                            Chicago, US <br>
-                            <i class="fa fa-phone"></i> Phone: +00 151515 <br>
-                            <i class="fa fa-envelope"></i> Email: mail@mail.com
-                            <br>
-                        </div>
-                        <div class="col-sm-6">
-                            <form style="max-width: 400px;" class="d-flex
-                                flex-column mb-3">
-                                <div class="form-group mb-2 d-flex
-                                    justify-content-between">
-                                    <input type="Name" class="form-control mr-1"
-                                        id="Name"
-                                        placeholder="Name">
-                                    <input type="Email" class="form-control
-                                        ml-1"
-                                        id="Email" placeholder="Email">
-                                </div>
-                                <div class="form-group mb-2">
-                                    <input type="Message" class="form-control"
-                                        id="Name" placeholder="Message">
-                                </div>
-                                <div class="text-right mt-2">
-                                    <div style="background-color: black; color:
-                                        white;"
-                                        class="btn pl-3 pr-3">SEND</div>
-                                </div>
-                            </form>
-                            <!-- <form class="form-inline">
-                            <div class="form-group mb-2">
-                              <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com">
+                    <div class="">
+                        <div class="row">
+                            <div class="form-title col-sm text-left">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                Chicago, US <br>
+                                <i class="fa fa-phone"></i> Phone: +00 151515 <br>
+                                <i class="fa fa-envelope"></i> Email: mail@mail.com
+                                <br>
                             </div>
-                            <div class="form-group mb-2">
-                              <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+                            <div class="col-sm">
+                                <form  class="mb-3">
+                                    <div class="input-group mb-0">
+                                        <div class="col-sm-6 p-1" style="margin: 0;padding: 0;" >
+                                            <input type="Name" class="form-control"
+                                            id="Email"
+                                            placeholder="Name">
+                                        </div>
+                                        <div class="col-sm-6 p-1"  style="margin: 0;padding: 0;">
+                                            <input type="Email" class="form-control"
+                                            id="Email" placeholder="Email">
+                                        </div>
+                                    </div>
+                                    <div class="inout-group mb-2 p-1">
+                                        <input type="Message" class="form-control"
+                                            id="Email" placeholder="Message">
+                                    </div>
+                                    <div class="text-right mt-2">
+                                        <div style="background-color: black; color:
+                                            white;"
+                                            class="btn pl-3 pr-3">SEND</div>
+                                    </div>
+                                </form>
+
                             </div>
-                          </form> -->
                         </div>
                     </div>
 
@@ -359,3 +355,12 @@ function myFunction() {
 }
 </script>
 </html>
+
+                                <!-- <form class="form-inline">
+                                <div class="form-group mb-2">
+                                  <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com">
+                                </div>
+                                <div class="form-group mb-2">
+                                  <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+                                </div>
+                              </form> -->

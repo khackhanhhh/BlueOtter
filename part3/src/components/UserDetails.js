@@ -92,17 +92,17 @@ const UserDetails = (props) => {
                     <tr>
                         <td>Photo</td>
                         <td>{countPhoto * album.length}</td>
-                        <td><Link to={"/photos/" + user.id}>Details</Link></td>
+                        <td><button type="button" class="btn btn-dark"><Link to={"/photos/" + user.id} className="text-light">Details</Link></button></td>
                     </tr>
                     <tr>
                         <td>Todo</td>
                         <td>{todo.length}</td>
-                        <td><Link to={"/todos/" + user.id}>Details</Link></td>
+                        <td><button type="button" class="btn btn-dark"><Link to={"/todos/" + user.id} className="text-light">Details</Link></button></td>
                     </tr>
                     <tr>
                         <td>Comment</td>
                         <td>{countComment * post.length}</td>
-                        <td><Link to={"/comments/" + user.id}>Details</Link></td>
+                        <td><button type="button" class="btn btn-dark"><Link to={"/comments/" + user.id} className="text-light">Details</Link></button></td>
                     </tr>
                 </thead>
             </table>

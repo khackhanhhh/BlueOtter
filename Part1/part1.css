@@ -12,6 +12,10 @@
     color: black;
 }
 
+.nav:hover{
+    background-color: silver;
+}
+
 .btn-outline:hover {
     background-color: red;
     border-radius: 0px;
@@ -129,6 +133,6 @@ input#Name {
 @media only screen  and (max-width: 576px) { 
   .form-title{
       margin-bottom: 20px;
-      text-align: center;
   } 
+
 } 

@@ -6,8 +6,9 @@ import UserDetails from './components/UserDetails';
 import UserList from './components/UserList';
 import UserTodo from './components/UserTodo';
 import AlbumList from './components/AlbumList';
-import UserComment from './components/UserComment';
-import UserPhoto from './components/UserPhoto';
+import CommentList from './components/CommentList';
+import PhotoList from './components/PhotoList';
+import PostList from './components/PostList'
 
 function App() {
   return (
@@ -17,9 +18,10 @@ function App() {
       <Route path="/" exact component={UserList} />
       <Route path="/:id" exact component={UserDetails} />
       <Route path="/todos/:id" component={UserTodo} />
-      <Route path="/comments/:id" component={UserComment} />
+      <Route path="/post/:id" component={CommentList} />
       <Route path="/photos/:id" component={AlbumList} />
-      <Route path="/album/:id" component={UserPhoto} />
+      <Route path="/album/:id" component={PhotoList} />
+      <Route path="/comments/:id" component={PostList} />
       </div>
     </Router>
     
